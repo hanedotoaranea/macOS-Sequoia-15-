@@ -1,0 +1,24 @@
+sudo launchctl disable system/com.apple.mediaanalysisd
+sudo pkill -f mediaanalysisd
+sudo launchctl disable system/com.apple.managedappdistribution.xpc
+sudo launchctl bootout system/com.apple.managedappdistribution.xpc
+sudo launchctl disable system/com.apple.installcoordinationd
+sudo pkill -f installcoordinationd
+sudo killall screencapture
+sudo mdutil -a -i off
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+sudo killall ContextStoreAgent
+sudo launchctl disable system/com.apple.mediaanalysisd
+sudo pkill -f mediaanalysisd
+sudo launchctl disable system/com.apple.managedappdistribution.xpc
+sudo launchctl bootout system/com.apple.managedappdistribution.xpc
+sudo launchctl disable system/com.apple.installcoordinationd
+sudo pkill -f installcoordinationd
+sudo killall screencapture
+sudo mdutil -a -i off
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+sudo killall ContextStoreAgent
+
+
+
+
