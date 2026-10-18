@@ -1,4 +1,4 @@
-
+![Uploading Снимок экрана 2026-10-18 в 22.43.40.png…]()
 
 \OpenCore-1.0.7-DEBUG\Utilities\macrecovery + cmd
 # Latest version
