@@ -21,8 +21,9 @@ sudo mdutil -a -i off
 sudo launchctl disable system/com.apple.ContextStoreAgent
 launchctl disable gui/$(id -u)/com.apple.ContextStoreAgent
 
-# --- MTU 9000 (Jumbo Frames) — только если вся сеть поддерживает ---
-sudo ifconfig en0 mtu 9000
+sudo ifconfig en0 media 100baseTX mediaopt half-duplex
+ifconfig en0 | grep media
+sudo ifconfig en0 mtu 1500
 
 mdutil -s /                          # должно быть "Indexing disabled"
 launchctl print-disabled system | grep -E "airportd|mediaanalysisd|ContextStore|managedapp"  # покажет disabled
